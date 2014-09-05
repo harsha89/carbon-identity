@@ -30,7 +30,6 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.osgi.framework.BundleContext;
 import org.osgi.service.component.ComponentContext;
-import org.wso2.carbon.identity.application.common.model.IdentityProvider;
 import org.wso2.carbon.identity.application.common.model.ServiceProvider;
 import org.wso2.carbon.identity.application.mgt.ApplicationManagementOSGIService;
 import org.wso2.carbon.identity.application.mgt.ApplicationManagementService;
@@ -41,7 +40,8 @@ import org.wso2.carbon.utils.CarbonUtils;
 import org.wso2.carbon.utils.ConfigurationContextService;
 
 /**
- * @scr.component name="identity.application.management.component" immediate="true"
+ * @scr.component name="identity.application.management.component"
+ *                immediate="true"
  * @scr.reference name="registry.service"
  *                interface="org.wso2.carbon.registry.core.service.RegistryService"
  *                cardinality="1..1" policy="dynamic" bind="setRegistryService"
