@@ -217,7 +217,7 @@ public class ApplicationManagementOSGIService{
             if (!ApplicationConstants.LOCAL_SP.equals(serviceProvider.getApplicationName())
                     && !ApplicationMgtOSGIUtil.isUserAuthorized(serviceProvider.getApplicationName(),
                             serviceProvider.getApplicationID())) {
-                log.warn("Illegale Access! User " + CarbonContext.getThreadLocalCarbonContext().getUsername()
+                log.warn("Illegale Access! User " + CarbonContext.getCurrentContext().getUsername()
                         + " does not have access to the application "
                         + serviceProvider.getApplicationName());
                 throw new IdentityApplicationManagementException("User not authorized");
@@ -256,7 +256,7 @@ public class ApplicationManagementOSGIService{
             }
 
             if (!ApplicationMgtOSGIUtil.isUserAuthorized(applicationName)) {
-                log.warn("Illegal Access! User " + CarbonContext.getThreadLocalCarbonContext().getUsername()
+                log.warn("Illegal Access! User " + CarbonContext.getCurrentContext().getUsername()
                         + " does not have access to the application " + applicationName);
                 throw new IdentityApplicationManagementException("User not authorized");
             }
